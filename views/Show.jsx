@@ -12,6 +12,7 @@ class Show extends React.Component {
         <h2> {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h2> 
          <img src={pokemon.img + ".jpg"}> 
         </img>
+        <a href="/pokemon/"> Back</a>
         </>
         )
     }

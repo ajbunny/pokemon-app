@@ -10,7 +10,7 @@ const myStyle = {
         const {allPokemon} = this.props
     return (
         <>
-      <h1 style={myStyle}>Balls to the Walls Pokemon</h1>)
+      <h1 style={myStyle}>Balls to the Walls Pokemon</h1>
       <ul>
         {allPokemon.map((pokemon, i) => {
             return (
