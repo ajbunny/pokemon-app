@@ -1,8 +1,9 @@
 const React = require('react');
 
 const myStyle = {
-    color: '#ffffff',
-    backgroundColor: '#000000',
+    color: 'black',
+    backgroundColor: 'rgb(106, 134, 56)',
+    
   };
 
   class Index extends React.Component {
