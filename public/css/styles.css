@@ -1,0 +1,15 @@
+
+body {
+    background-color:rgb(183, 210, 133) ;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+
+}
+ul {
+    padding: 20, 10;
+}
+
+

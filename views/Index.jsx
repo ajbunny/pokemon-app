@@ -1,5 +1,5 @@
 const React = require('react');
-const pokemon = require('../models/pokemon');
+
 const myStyle = {
     color: '#ffffff',
     backgroundColor: '#000000',
@@ -9,7 +9,8 @@ const myStyle = {
     render () {
         const {allPokemon} = this.props
     return (
-        <>
+        <div>
+        <link rel="stylesheet" href="/css/styles.css" type='text/css' />
       <h1 style={myStyle}>Balls to the Walls Pokemon</h1>
       <ul>
         {allPokemon.map((pokemon, i) => {
@@ -22,7 +23,7 @@ const myStyle = {
         })}
       </ul>
     
-    </>
+    </div>
     )
     }
 }
