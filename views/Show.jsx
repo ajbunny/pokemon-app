@@ -1,4 +1,4 @@
-const React = require('react');
+const React = require("react");
 
 const style = {
     body: 'rgb(106, 134, 56)'
@@ -7,10 +7,8 @@ const style = {
 class Show extends React.Component {
     
     render () {
-        let pokemon = this.props.pokemon
-
-       
-        return (
+        const{ pokemon } = this.props
+              return (
         <>
          <div style={style}>
         <h1>Gotta Catch 'Em All</h1>
@@ -20,8 +18,7 @@ class Show extends React.Component {
         <a href="/pokemon/"> Back</a>
         </div>
         </>
-        )
-       
+        )     
     }
 } 
 
