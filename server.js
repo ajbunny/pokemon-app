@@ -51,7 +51,10 @@ app.get('/pokemon/new', (req,res) =>{
     res.render('New')
 })
 
+
 app.post('/pokemon', (req,res )=> {
+    let pokemonBody = req.body
+    pokemonBody.img = pokemonBody.name
 
     Pokemon.create(req.body, (error, createPokemon) =>{
         res.redirect('/pokemon')
