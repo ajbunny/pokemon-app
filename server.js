@@ -5,10 +5,12 @@ const app = express();
 const port = 3000
 const db = mongoose.connection
 
+//Code added from Hadia (worked)
 const mongoURI = process.env.MONGO_URI
 mongoose.connect(mongoURI);
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
+//Code added from Hadia (worked)
 db.on("error", (err) => console.log(err.message + " is mongod not running?"));
 db.on("open", () => console.log("mongo connected: ", mongoURI));
 db.on("close", () => console.log("mongo disconnected"));
@@ -21,6 +23,7 @@ app.use((req, res, next) => {
     next()
 })
 
+////This needs explained to me//////
 app.use(express.urlencoded({ extended: false }))
 mongoose.set("strictQuery", true)
 
@@ -41,7 +44,7 @@ app.get('/pokemon/', (req, res) =>{
             allPokemon: allPokemon
         })
     })
-    // res.render("Index", {allPokemon: Pokemon});
+  
 })
 
 app.get('/pokemon/new', (req,res) =>{
@@ -55,6 +58,7 @@ app.post('/pokemon', (req,res )=> {
     })
 })
 
+//Show Route
 app.get('/pokemon/:id', (req, res) => {
     Pokemon.findById(req.params.id, (err, foundPokemon) => {
         res.render("Show", {
@@ -67,7 +71,7 @@ app.get('/pokemon/:id', (req, res) => {
 
 app.use(express.static('public'));
 
-// const pokemon = [ //THIS IS THE CODE USED TO 
+// const pokemon = [ //THIS IS THE CODE USED TO CONNECT DATA TO MONGO DB
 //     {name: "bulbasaur", img: "http://img.pokemondb.net/artwork/bulbasaur"},
 //     {name: "ivysaur", img: "http://img.pokemondb.net/artwork/ivysaur"},
 //     {name: "venusaur", img: "http://img.pokemondb.net/artwork/venusaur"},
@@ -77,7 +81,7 @@ app.use(express.static('public'));
 //     {name: "wartortle", img: "http://img.pokemondb.net/artwork/wartortle"}
 //  ];
 
-
+//THIS CODE WAS ALSO USED TO CONNECT DATA TO MONGO DB
 // Pokemon.insertMany(pokemon)
 // // if database transaction succeeds
 // .then((pokemon) => {

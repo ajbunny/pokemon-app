@@ -11,7 +11,7 @@ const myStyle = {
         const { allPokemon } = this.props
     return (
         <div>
-        <link rel="stylesheet" href="/css/styles.css" type='text/css' />
+        <link rel="stylesheet" href="../css/styles.css" type='text/css' />
       <h1 style={myStyle}>Balls to the Walls Pokemon</h1>
       <nav>
         <a href="/pokemon/New">Create a New Pokemon</a>
